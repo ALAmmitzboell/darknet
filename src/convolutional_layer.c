@@ -314,7 +314,8 @@ void cudnn_convolutional_setup(layer *l, int cudnn_preference, size_t workspace_
 
     found_conv_algorithm = 0;
     min_time = 1000000;   // 1000 sec
-    for (int i = 0; i < returned_algo_count; i++)
+    int i = 0;
+    for (i = 0; i < returned_algo_count; i++)
     {
         if (conv_fwd_results[i].status == CUDNN_STATUS_SUCCESS &&
             conv_fwd_results[i].algo != CUDNN_CONVOLUTION_FWD_ALGO_WINOGRAD_NONFUSED &&
@@ -353,7 +354,8 @@ void cudnn_convolutional_setup(layer *l, int cudnn_preference, size_t workspace_
 
     found_conv_algorithm = 0;
     min_time = 1000000;   // 1000 sec
-    for (int i = 0; i < returned_algo_count; i++)
+    i = 0;
+    for (i = 0; i < returned_algo_count; i++)
     {
         if (conv_bwd_data_results[i].status == CUDNN_STATUS_SUCCESS &&
             conv_bwd_data_results[i].memory < free_memory &&
@@ -390,7 +392,8 @@ void cudnn_convolutional_setup(layer *l, int cudnn_preference, size_t workspace_
 
     found_conv_algorithm = 0;
     min_time = 1000000;   // 1000 sec
-    for (int i = 0; i < returned_algo_count; i++)
+    i = 0;
+    for (i = 0; i < returned_algo_count; i++)
     {
         if (conv_bwd_filter_results[i].status == CUDNN_STATUS_SUCCESS &&
             conv_bwd_filter_results[i].memory < free_memory &&
