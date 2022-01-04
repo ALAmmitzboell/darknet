@@ -1,6 +1,8 @@
 # YOLO SWAgroup Yolo v3 for motorcycle detection and model training.
-## Short 
+## Please read me :)
 This repository is forked from [AlexeyAB's repository](https://github.com/AlexeyAB), and changed to fit our problem, thus parts of this code is our own, which we will state below.
+
+N O T E: We are unable to provide a Jupyter Notebook for building and training our models because we did these parts on HPC. The steps needed to build the models depend on the operating system and therefore there is no simple way to turn the process into a Jupyter Notebook. However we do provide Colab Notebooks for [using our trained models](https://colab.research.google.com/drive/1ULT6TugpDRaLTk-CB3neusN_xTtCpTZk) and for [computing our graphs](https://colab.research.google.com/drive/1KukcY0026BplZ4Mo4YG2Bz6EKsHtjZHN?usp=sharing).
 
 ## Model and Training
 This is our source code for building, training and applying a YOLOv3 model on the DTU HPC cluster. Weights files are too big to upload on GitHub, so here's a link to the [initial weights](https://pjreddie.com/media/files/darknet53.conv.74) we used for training the models. They need to be placed in the main directory of darknet. Additionally, here are some of the weights we got from training (these are all the weights that we have used for the report):
@@ -33,7 +35,7 @@ Training the model (on HPC):
 - Revise [lines 6-8](https://github.com/ALAmmitzboell/darknet/blob/master/jobScript.sh#L6-L8)
 - Open a terminal (doesn't need to be a voltash terminal)
 - Change directory to the main `darknet` folder
-- Use the command `bsub < jobScript.sh` to submit the job. Outputs will be printed to the file `e` and `results/output.log`
+- Use the command `bsub < jobScript.sh` to submit the job. Outputs will be printed to the files `Error.err`, `Output.out` and `results/output.log`
 - Every 10000th set of weights is automatically saved in the `backup` folder
 
 ## Results 
