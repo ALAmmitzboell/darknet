@@ -114,12 +114,12 @@ LDFLAGS+= -lgomp
 endif
 
 ifeq ($(GPU), 1)
-COMMON+= -DGPU -I/usr/local/cuda/include/
+COMMON+= -DGPU -I$(CUDA_HOME)/include/
 CFLAGS+= -DGPU
 ifeq ($(OS),Darwin) #MAC
 LDFLAGS+= -L/usr/local/cuda/lib -lcuda -lcudart -lcublas -lcurand
 else
-LDFLAGS+= -L/usr/local/cuda/lib64 -lcuda -lcudart -lcublas -lcurand
+LDFLAGS+= -L$(CUDA_HOME)/lib64 -lcuda -lcudart -lcublas -lcurand
 endif
 endif
 
@@ -129,8 +129,8 @@ ifeq ($(OS),Darwin) #MAC
 CFLAGS+= -DCUDNN -I/usr/local/cuda/include
 LDFLAGS+= -L/usr/local/cuda/lib -lcudnn
 else
-CFLAGS+= -DCUDNN -I/usr/local/cudnn/include
-LDFLAGS+= -L/usr/local/cudnn/lib64 -lcudnn
+CFLAGS+= -DCUDNN -I$(MODULE_CUDNN_BASE_DIR)/include
+LDFLAGS+= -L$(MODULE_CUDNN_BASE_DIR)/lib64 -lcudnn
 endif
 endif
 
