@@ -1,0 +1,14 @@
+sc10000
+mean average precision (mAP@0.25) = 0.943684, or 94.37 %
+mean average precision (mAP@0.50) = 0.934182, or 93.42 %
+mean average precision (mAP@0.75) = 0.848712, or 84.87 %
+
+sc40000
+mean average precision (mAP@0.25) = 0.934225, or 93.42 %
+mean average precision (mAP@0.50) = 0.927908, or 92.79 %
+mean average precision (mAP@0.75) = 0.868544, or 86.85 %
+
+sc80000
+mean average precision (mAP@0.25) = 0.929758, or 92.98 %
+mean average precision (mAP@0.50) = 0.924452, or 92.45 %
+mean average precision (mAP@0.75) = 0.874605, or 87.46 %
