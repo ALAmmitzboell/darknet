@@ -29,8 +29,8 @@ Building the framework:
 - Use the command `make` (A lot of warnings will be generated, but there should be no errors)
 
 Training the model (on HPC):
-- In jobScript.sh, remove the `###` from [line 16](https://github.com/s174508/darknet/blob/master/jobScript.sh#L16) and add `###` in from of [line 22](https://github.com/s174508/darknet/blob/master/jobScript.sh#L22)
-- Revise [lines 6-8](https://github.com/s174508/darknet/blob/master/jobScript.sh#L6-L8)
+- In jobScript.sh, remove the `###` from [line 16](https://github.com/ALAmmitzboell/darknet/blob/master/jobScript.sh#L16) and add `###` in from of [line 22](https://github.com/ALAmmitzboell/darknet/blob/master/jobScript.sh#L22)
+- Revise [lines 6-8](https://github.com/ALAmmitzboell/darknet/blob/master/jobScript.sh#L6-L8)
 - Open a terminal (doesn't need to be a voltash terminal)
 - Change directory to the main `darknet` folder
 - Use the command `bsub < jobScript.sh` to submit the job. Outputs will be printed to the file `e` and `results/output.log`
